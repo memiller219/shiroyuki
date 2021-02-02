@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import "./menu-item.styles.scss";
 
 const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
-  // destructuring items props
 
   return (
     <div
