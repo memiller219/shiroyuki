@@ -1,18 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
 
-
 import Homepage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component";
-import CheckoutPage from './pages/checkout/checkout.component'
+import CheckoutPage from "./pages/checkout/checkout.component";
 import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
-
 
 import { Route, Switch, Redirect } from "react-router-dom";
 import Header from "./components/header/header.component";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
-import { selectCurrentUser } from './redux/user/user.selectors'
-import { createStructuredSelector } from 'reselect';
+import { selectCurrentUser } from "./redux/user/user.selectors";
+import { createStructuredSelector } from "reselect";
 import { setCurrentUser } from "./redux/user/user.actions";
 
 class App extends React.Component {
@@ -31,9 +29,8 @@ class App extends React.Component {
             ...snapShot.data(),
           });
         });
-      } else {
-        setCurrentUser(userAuth);
       }
+      setCurrentUser(userAuth);
     });
   }
 
