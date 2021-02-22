@@ -8,6 +8,8 @@ const buttonStyles = css`
     background-color: white;
     color: black;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
   }
 `;
 
@@ -31,6 +33,7 @@ const googleSignInStyles = css`
   &:hover {
     background-color: #357ae8;
     border: none;
+
   }
 `;
 
@@ -42,6 +45,8 @@ const getButtonStyles = (props) => {
 };
 
 export const CustomButtonContainer = styled.button`
+  ${getButtonStyles}
+
   min-width: 165px;
   width: auto;
   height: 50px;
@@ -55,6 +60,4 @@ export const CustomButtonContainer = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: center;
-
-  ${getButtonStyles}
 `;

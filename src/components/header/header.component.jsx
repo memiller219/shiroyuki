@@ -12,7 +12,7 @@ import { HeaderContainer, LogoContainer,OptionsContainer, OptionLink } from './h
 const Header = ({ currentUser, hidden }) => {
   return (
     <HeaderContainer>
-      <LogoContainer to="/">SHIRO Yuki</LogoContainer>
+      <LogoContainer to="/">skiBAY</LogoContainer>
       <OptionsContainer>
         <OptionLink to="/shop">
           SHOP
